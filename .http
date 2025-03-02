@@ -1,0 +1,41 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "mypassword"
+}
+
+###
+
+GET http://localhost:3000/users/679a17ea0fa60fd19aed58e3 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhMTdlYTBmYTYwZmQxOWFlZDU4ZTMiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNTcyMjIsImV4cCI6MTczODI0MzYyMn0._vLTD3DKw4CaoeZ8ES3g3glSdHNecd11igmZnY-Ales
+
+###
+POST http://localhost:3000/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhMTdlYTBmYTYwZmQxOWFlZDU4ZTMiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNjk4ODEsImV4cCI6MTczODI1NjI4MX0.YMFkQz2kq59bFFl2oDnW2tPZcDZVw3J85leIMjhj4kk
+
+{
+    "userId": "679a17ea0fa60fd19aed58e3",
+    "title": "Interview"
+}
+
+###
+GET http://localhost:3000/todos/679a17ea0fa60fd19aed58e3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhMTdlYTBmYTYwZmQxOWFlZDU4ZTMiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNjk4ODEsImV4cCI6MTczODI1NjI4MX0.YMFkQz2kq59bFFl2oDnW2tPZcDZVw3J85leIMjhj4kk
+
+###
+
+POST http://localhost:3000/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzlhMTdlYTBmYTYwZmQxOWFlZDU4ZTMiLCJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNjk4ODEsImV4cCI6MTczODI1NjI4MX0.YMFkQz2kq59bFFl2oDnW2tPZcDZVw3J85leIMjhj4kk
+
+{
+    "title": "NodeJS",
+    "todoId": "679a6128e6a08c71c3fd074e",
+    "completed": false,
+    "timeline": "2025-02-01"
+}
